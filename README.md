@@ -4,7 +4,7 @@ A repo for teaching materials on some languages.
 
 This is a **Github Repo** and you can navigate to different folders from the explorer pane above.
 
-For anything you'll need a [nice editor](http://code.visualstudio.com) and a terminal ([here's a better one](http://hyper.is)). (If you're completely new to this, follow [these instructions](../../bash/) to open terminal).
+For anything you'll need a [nice editor](http://code.visualstudio.com) and a terminal ([here's a better one](http://hyper.is)). (If you're completely new to this, follow [these instructions](/bash) to open terminal).
 
 **For Windows**, upgrade to Windows 10 and [enable WSL](https://msdn.microsoft.com/en-us/commandline/wsl/install-win10).
 **For Mac**, install [Homebrew](http://brew.sh).
