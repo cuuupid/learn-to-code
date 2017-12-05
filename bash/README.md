@@ -1,5 +1,22 @@
 # How to Bash
 
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [How to Bash](#how-to-bash)
+  - [Running Bash](#running-bash)
+  - [Testing your installation](#testing-your-installation)
+  - [Navigating with Terminal](#navigating-with-terminal)
+  - [Basic Read/Write](#basic-readwrite)
+  - [Removing](#removing)
+  - [More Read/Write](#more-readwrite)
+  - [CRUD](#crud)
+  - [Flags](#flags)
+  - [Permissions](#permissions)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 ## Running Bash
 
 I'm on **Windows,** click Start and scroll the apps to "Bash on Ubuntu for ...". Click this, it'll open a bash terminal.

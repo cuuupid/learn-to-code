@@ -4,6 +4,18 @@ A repo for teaching materials on some languages.
 
 This is a **Github Repo** and you can navigate to different folders from the explorer pane above.
 
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Learn to Code](#learn-to-code)
+  - [Prerequisites](#prerequisites)
+  - [Getting Bash](#getting-bash)
+  - [Some helpful tools we'll use](#some-helpful-tools-well-use)
+  - [Requirements for Languages](#requirements-for-languages)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 ## Prerequisites
 
 For anything you'll need a [nice editor](http://code.visualstudio.com) and a terminal ([here's a better one](http://hyper.is)). (If you're completely new to this, follow [these instructions](/bash) to open terminal).
