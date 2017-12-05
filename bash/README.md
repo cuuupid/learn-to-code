@@ -3,6 +3,7 @@
 ## Running Bash
 
 I'm on **Windows,** click Start and scroll the apps to "Bash on Ubuntu for ...". Click this, it'll open a bash terminal.
+
 I'm on **Mac,** run Terminal from spotlight search (or if you got the better terminal, run Hyper!).
 
 Please complete the Git and Homebrew installations in the README.
@@ -12,6 +13,7 @@ We call the view you're seeing now the `console`, `bash console`, `terminal`, or
 ## Testing your installation
 
 Open bash. You'll be in the home directory. Run the following. (After each command you send to bash you have to press enter.)
+
 ``` bash
 cd Documents
 mkdir github
@@ -83,19 +85,19 @@ To write contents to a file, try running `echo Hello World >> hello`. The `hello
 
 `>>` indicates to send all output to the file. `cat file1 >> file2` will write the contents of file1 to file2.
 
-You can also _pipe_ content. The `|` or pipe character designates that what is to the left should be sent to what is on the right as input. For example `cat helloworld.sh` will spit out the contents of `helloworld.sh`. If we run `cat helloworld.sh | cat`, we pipe the contents of `helloworld.sh` to the `cat` command, which will spit out the result (the output will be the same, but it will have gone through 2 `cat`s). This is useful for very advanced commands but it is unlikely you will use this. A common use is to use one script to spit out something and then use that as the input for another script--this chain of scripts that use the previous script as an input is called a `pipeline`.
+You can also _pipe_ content. The `|` or pipe character designates that what is to the left should be sent to what is on the right as input. 
+- For example `cat helloworld.sh` will spit out the contents of `helloworld.sh`. If we run `cat helloworld.sh | cat`, we pipe the contents of `helloworld.sh` to the `cat` command, which will spit out the result (the output will be the same, but it will have gone through 2 `cat`s).
+- This is useful for very advanced commands but it is unlikely you will use this. A common use-case is to run one script to spit out something and then use that as the input for another script--this chain of scripts that use the previous script as an input is called a `pipeline`, or at least is a very rudimentary form of one.
 
-To edit files, you can use a number of solutions. Some systems have `vim` or `nano` installed, and you can edit files inside the terminal by running `vim <filename>` (to exit Vim, do Ctrl+C, type :wq to write your changes and quit, and then hit enter) or `nano <filename>` (to exit Nano, do Ctrl+X, and 'Y' to save changes and enter to exit).
-
-We installed **VSCode** already so we can use the `code` command to open up files in VSCode. `code <filename>` will open the file in VSCode for editing whereas `code .` or `code <foldername>` will open up a folder in VSCode.
+To edit files, you can use a number of solutions.
+- Some systems have `vim` or `nano` installed, and you can edit files inside the terminal by running `vim <filename>` (to exit Vim, do Ctrl+C, type :wq to write your changes and quit, and then hit enter) or `nano <filename>` (to exit Nano, do Ctrl+X, and 'Y' to save changes and enter to exit).
+- We installed **VSCode** already so we can use the `code` command to open up files in VSCode. `code <filename>` will open the file in VSCode for editing whereas `code .` or `code <foldername>` will open up a folder in VSCode.
 
 ## Flags
 
 I've been mentioning flags a lot, so I'll briefly explain flags. Flags are given using the `-` or `--` symbols, and are analogous to options for commands.
-
-For example, the `all` flag for `ls` shows all files, even hidden ones. You can give the all flag in long form using `--`, e.g. `ls --all`, or you can give it shorthand using just the first character, e.g. `ls -a`.
-
-(almost) All commands have the `help` flag that can be shown by running `<command> --help`, which prints out some helpful info. (**You can also run `man <command>` to view the man_ual_ on that command.**)
+- For example, the `all` flag for `ls` shows all files, even hidden ones. You can give the all flag in long form using `--`, e.g. `ls --all`, or you can give it shorthand using just the first character, e.g. `ls -a`.
+- (almost) All commands have the `help` flag that can be shown by running `<command> --help`, which prints out some helpful info. (**You can also run `man <command>` to view the man_ual_ on that command.**)
 
 Let's analyze the command we used earlier, `ls -laF`. `ls` as we know gives us the contents of the current directory. 
 
