@@ -53,6 +53,7 @@ Here are some important things to remember:
   - What do I mean by absolute? `cd github` takes me inside the github folder from the current directory. `cd /etc` will take me to the "etc" directory under the root directory. Relative paths start from the current directory (`cd ../../github` takes me up two levels and into the github directory) while absolute paths start from the root directory or home directory (`cd ~/Documents/github` will take me to the home directory then into Documents then into github folder).
 - Some directories are protected and you will not be able to enter them (we will discuss **chmod** later how to modify permissions).
 - You can always run the `pwd` command, which will simply output the current directory path (e.g. if I run `pwd` in Documents it'll give me `/Users/pshah123/Documents`).
+- You can give directories as options to `ls`, e.g. `ls ..` or `ls /` to print contents of those directories instead.
 
 ## Basic Read/Write
 
@@ -78,7 +79,7 @@ To remove a folder you will need two flags, `-rf`. The `f` specifies folder and 
 
 ## More Read/Write
 
-To write contents to a file, try running `echo Hello World >> hello`.
+To write contents to a file, try running `echo Hello World >> hello`. The `hello` file will now have `Hello World` (you can check this by running `cat hello`).
 
 `>>` indicates to send all output to the file. `cat file1 >> file2` will write the contents of file1 to file2.
 
@@ -88,3 +89,96 @@ To edit files, you can use a number of solutions. Some systems have `vim` or `na
 
 We installed **VSCode** already so we can use the `code` command to open up files in VSCode. `code <filename>` will open the file in VSCode for editing whereas `code .` or `code <foldername>` will open up a folder in VSCode.
 
+## Flags
+
+I've been mentioning flags a lot, so I'll briefly explain flags. Flags are given using the `-` or `--` symbols, and are analogous to options for commands.
+
+For example, the `all` flag for `ls` shows all files, even hidden ones. You can give the all flag in long form using `--`, e.g. `ls --all`, or you can give it shorthand using just the first character, e.g. `ls -a`.
+
+(almost) All commands have the `help` flag that can be shown by running `<command> --help`, which prints out some helpful info. (**You can also run `man <command>` to view the man_ual_ on that command.**)
+
+Let's analyze the command we used earlier, `ls -laF`. `ls` as we know gives us the contents of the current directory. 
+
+- The `a` flag (shorthand for `all`) shows us all files, including hidden files/directories. 
+- The `l` flag gives us information, including the size of the directory, size of each file, timestamp, permissions, and colorcodes based on level of permissions the file has and whether it was edited and whether it is just a symlink (aka shortcut). 
+- The `F` flag adds a `/` to the end of directory names so we can differentiate between what is a folder and what is a file.
+
+Instead of typing `ls -l -a -F`, we can combine them all under one shorthand flag, `ls -laF`. The - tells the command that the next sequence of characters are all one letter flags. **DO NOT combine long flags, e.g. you cannot type `ls --allhelp` for both the all and help flags. These could be other flags.**
+
+## Permissions
+
+I've been talking about permissions a lot lately as well. Permissions tell the system who is allowed to touch what.
+
+There are three levels of permissions: Read, Write, Execute. (r, w, x)
+
+There are three rings of permissions for `chmod`, and these are **Owner**, **Group**, and **Public**. The owner of a file has permissions, the group of users the owner belongs to has other permissions, and everyone else has their own set of permissions.
+
+e.g. rwx for the owner signals the owner can read, write, and execute.
+
+Permissions are generally expressed in 9 characters:
+
+_ _ _ _ _ _ _ _ _
+1 2 3 4 5 6 7 8 9
+
+Where each set of three corresponds to owner, group, and public respectively.
+
+Examples:
+
+rwxrwxrwx says everyone can do everything.
+
+rwxrwxr-x says only the owner or the group can write the file.
+
+rwxr-x--x says only the owner can read, write, and execute, the group the owner belongs to can read and execute, and the public can only execute the script.
+
+r-------- says only the owner can read, and no one can do anything else.
+
+As you can see, the permissions are either "on" or "off", e.g. a ring either can or cannot write a file. This allows permissions to be masked very easily to binary:
+
+r w x r w - r - -
+1 1 1 1 1 0 1 0 0
+
+Which can then be converted into an octal base mask (we use octal because the max is 111 = 7 so we can save on memory by using octal):
+
+111 = 7
+110 = 6
+100 = 4
+
+Therefore the permissions are 764.
+
+
+When you `ls -l` you'll see these permissions, e.g.
+
+```
+~/Documents/github/learn-to-code/bash $> ls -laF
+total 8206
+drwxrwxrwx 0 root root  512 Dec  5 17:17 ./
+drwxrwxrwx 0 root root  512 Dec  5 16:36 ../
+-rwxrwxrwx 1 root root   21 Dec  5 16:38 helloworld.sh*
+-rwxrwxrwx 1 root root 8877 Dec  5 17:46 README.md*
+```
+
+- The first charcter on the line is usually either a `-` (for files) or a `d` (for directories).
+- The next 9 characters show you the permissions, I have mine set to rwx for everyone.
+- The number after these 10 characters is the number of links to this file (again, basically shortcuts).
+- The next string is the person who owns it, I was root when I made these files so it says `root`.
+- The next string is the group of the owner, the `root` user belongs to the `root` group so thats what that says.
+- The next string of digits is the filesize.
+- Then there is the timestamp, and lastly the name.
+
+We can change the permissions pretty easily by using `chmod`.
+
+The syntax is as follows:
+
+``` bash
+chmod <mode> <filename>
+```
+
+Where mode is the octal mask for permissions and filename gives the file to be changed.
+
+e.g. to set rwxrwxrwx (everyone can do everything) permissions to `hello.txt`:
+
+rwx rwx rwx = 111 111 111 = 7 7 7, so the mode is 777
+
+``` bash
+chmod 777 hello.txt
+```
