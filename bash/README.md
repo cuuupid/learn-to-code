@@ -6,7 +6,7 @@ I'm on **Windows,** click Start and scroll the apps to "Bash on Ubuntu for ...".
 
 I'm on **Mac,** run Terminal from spotlight search (or if you got the better terminal, run Hyper!).
 
-Please complete the Git and Homebrew installations in the README.
+**Please now complete the Git and Homebrew installations in the README.**
 
 We call the view you're seeing now the `console`, `bash console`, `terminal`, or `shell`. There are lots of names for it :ghost:.
 

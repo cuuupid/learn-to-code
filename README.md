@@ -4,7 +4,16 @@ A repo for teaching materials on some languages.
 
 This is a **Github Repo** and you can navigate to different folders from the explorer pane above.
 
+## Prerequisites
+
 For anything you'll need a [nice editor](http://code.visualstudio.com) and a terminal ([here's a better one](http://hyper.is)). (If you're completely new to this, follow [these instructions](/bash) to open terminal).
+
+## Getting Bash
+
+Please use bash and go through the `bash` tutorial first.
+- Test your installation: open a bash terminal, in the `bash` folder `bash helloworld.sh`
+
+## Some helpful tools we'll use
 
 **For Windows**, upgrade to Windows 10 and [enable WSL](https://msdn.microsoft.com/en-us/commandline/wsl/install-win10).
 **For Mac**, install [Homebrew](http://brew.sh).
@@ -13,8 +22,7 @@ You'll also need git.
 **For Windows** install [Git](https://git-scm.com/download/win).
 **For Mac** use homebrew to install, `brew install git` from Terminal.
 
-Please use bash and go through the `bash` tutorial first.
-- Test your installation: open a bash terminal, in the `bash` folder `bash helloworld.sh`
+## Requirements for Languages
 
 For `python` you'll need [Python 3.6](https://www.anaconda.com/download/) and jupyter notebook (comes with anaconda).
 - Test your installation: in the `python` https://docs.mongodb.com/manual/installation/#mongodb-community-editionfolder, `python helloworld.py`
