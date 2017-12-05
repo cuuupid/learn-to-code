@@ -93,6 +93,17 @@ To edit files, you can use a number of solutions.
 - Some systems have `vim` or `nano` installed, and you can edit files inside the terminal by running `vim <filename>` (to exit Vim, do Ctrl+C, type :wq to write your changes and quit, and then hit enter) or `nano <filename>` (to exit Nano, do Ctrl+X, and 'Y' to save changes and enter to exit).
 - We installed **VSCode** already so we can use the `code` command to open up files in VSCode. `code <filename>` will open the file in VSCode for editing whereas `code .` or `code <foldername>` will open up a folder in VSCode.
 
+## CRUD
+
+You have essentially now learned how to:
+
+- **C**reate files
+- **R**ead files
+- **U**pdate files
+- **D**elete files
+
+These four components make up basic file I/O and persistent storage. This is called **CRUD** from the initials.
+
 ## Flags
 
 I've been mentioning flags a lot, so I'll briefly explain flags. Flags are given using the `-` or `--` symbols, and are analogous to options for commands.
