@@ -4,17 +4,35 @@ A repo for teaching materials on some languages.
 
 This is a **Github Repo** and you can navigate to different folders from the explorer pane above.
 
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**
+---------------
+
+**Table of Contents:**
 
 - [Learn to Code](#learn-to-code)
+  - [Ask a question](#confused?-ask-a-question)
   - [Prerequisites](#prerequisites)
   - [Getting Bash](#getting-bash)
   - [Some helpful tools we'll use](#some-helpful-tools-well-use)
   - [Requirements for Languages](#requirements-for-languages)
 
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+---------------
+
+## Confused? Ask a question
+
+I'm very active on GitHub and will try to answer any issues right away. Please **don't** email me for help. There is an "Issues" tab on the top; if you create an issue and, from the right hand side of the issue editor, click the gear icon next to labels, you can add the "Question" label to your issue.
+
+**The issues tab: **
+
+![Issues Tab](/.img/issues.png)
+
+**How to create a new issue: **
+
+![Create a new issue](/.img/new_issue.png)
+
+**And ask your question: **
+
+![How to ask a question](/.img/how_to_issue.png)
+
 
 ## Prerequisites
 
