@@ -21,15 +21,15 @@ This is a **Github Repo** and you can navigate to different folders from the exp
 
 I'm very active on GitHub and will try to answer any issues right away. Please **don't** email me for help. There is an "Issues" tab on the top; if you create an issue and, from the right hand side of the issue editor, click the gear icon next to labels, you can add the "Question" label to your issue.
 
-**The issues tab: **
+**Click the issues tab:**
 
 ![Issues Tab](/.img/issues.png)
 
-**How to create a new issue: **
+**Create a new issue:**
 
 ![Create a new issue](/.img/new_issue.png)
 
-**And ask your question: **
+**Ask your question and pick a label:**
 
 ![How to ask a question](/.img/how_to_issue.png)
 
