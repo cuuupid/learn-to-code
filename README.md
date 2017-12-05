@@ -6,7 +6,7 @@ This is a **Github Repo** and you can navigate to different folders from the exp
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+**Table of Contents**
 
 - [Learn to Code](#learn-to-code)
   - [Prerequisites](#prerequisites)
