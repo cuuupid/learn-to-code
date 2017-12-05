@@ -116,27 +116,28 @@ There are three rings of permissions for `chmod`, and these are **Owner**, **Gro
 e.g. rwx for the owner signals the owner can read, write, and execute.
 
 Permissions are generally expressed in 9 characters:
-
+```
 _ _ _ _ _ _ _ _ _
 1 2 3 4 5 6 7 8 9
+```
 
 Where each set of three corresponds to owner, group, and public respectively.
 
 Examples:
 
-rwxrwxrwx says everyone can do everything.
+`rwxrwxrwx` says everyone can do everything.
 
-rwxrwxr-x says only the owner or the group can write the file.
+`rwxrwxr-x` says only the owner or the group can write the file.
 
-rwxr-x--x says only the owner can read, write, and execute, the group the owner belongs to can read and execute, and the public can only execute the script.
+`rwxr-x--x` says only the owner can read, write, and execute, the group the owner belongs to can read and execute, and the public can only execute the script.
 
-r-------- says only the owner can read, and no one can do anything else.
+`r--------` says only the owner can read, and no one can do anything else.
 
 As you can see, the permissions are either "on" or "off", e.g. a ring either can or cannot write a file. This allows permissions to be masked very easily to binary:
-
+```
 r w x r w - r - -
 1 1 1 1 1 0 1 0 0
-
+```
 Which can then be converted into an octal base mask (we use octal because the max is 111 = 7 so we can save on memory by using octal):
 
 111 = 7
