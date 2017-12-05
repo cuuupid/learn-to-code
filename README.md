@@ -9,4 +9,4 @@ For anything you'll need a [nice editor](http://code.visualstudio.com) and a ter
 
 For `python` you'll need [Python 3.6](https://www.anaconda.com/download/) and jupyter notebook (comes with anaconda).
 
-For 'js' you'll need a web browser, [Node.js](https://nodejs.org/en/download/), React (`npm install create-react-app`), and [MongoDB](https://docs.mongodb.com/manual/installation/#mongodb-community-edition) (you also have to run `npm install -g mongoose`).
+For `js` you'll need a web browser, [Node.js](https://nodejs.org/en/download/), React (`npm install create-react-app`), and [MongoDB](https://docs.mongodb.com/manual/installation/#mongodb-community-edition) (you also have to run `npm install -g mongoose`).
