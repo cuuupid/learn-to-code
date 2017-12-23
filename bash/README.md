@@ -64,7 +64,7 @@ Here are some important things to remember:
 
 - `~` is the home directory. `cd ~` will bring you to the home directory (on Windows WSL this is a separate directory, on Mac this is your "Home" folder).
 - dotfiles, or files that start with a `.` are hidden and will not show if you `ls`. For these you need to add **flags** to the ls command (we will discuss flags later). Running `ls -laF` will show all files, the timestamps, and the privileges.
-- `.` alone refers to the current directory (`cd .` does nothing becuase you are entering the directory you are already in).
+- `.` alone refers to the current directory (`cd .` does nothing because you are entering the directory you are already in).
 - `..` refers to the previous directory (`cd ..` will take you up to the parent folder, e.g. from `github` to `Documents`)
 - `/` is the root directory (`cd /` takes you to the root dir), and is the highest level directory. There is no directory higher than `/` (or at least for our purposes) and all paths starting with a `/` will be **absolute**.
   - What do I mean by absolute? `cd github` takes me inside the github folder from the current directory. `cd /etc` will take me to the "etc" directory under the root directory. Relative paths start from the current directory (`cd ../../github` takes me up two levels and into the github directory) while absolute paths start from the root directory or home directory (`cd ~/Documents/github` will take me to the home directory then into Documents then into github folder).
